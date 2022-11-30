@@ -3,4 +3,4 @@ file -C -m school.mgc *
 file -m school.mgc *
 0 string SCHOOL School data
 file --mime-type -m school.mgc *
-! :mime School
+!:mime School
