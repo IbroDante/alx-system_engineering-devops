@@ -1,2 +1,2 @@
-#!/bin/bash/0x00-shell_basics
-ls -mpa
+#!/bin/bash
+ls 0x00-shell_basics
