@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 #prints clock in hours andin minutes
 hour=0
-minute=1
 
-while [ $hour -lt 13 ]
+while [ $hour -le 12 ]
 do
-  while [ $minute -lt 60 ]
+  echo "Hour: $hour"
+  minute=1
+  while [ $minute -le 59 ]
   do
-    printf "%02d:%02d\n" $hour $minute
-    ((minute++))
+    echo "$minute"
+    (( minute++ ))
   done
-  minute=0
-  ((hour++))
+  (( hour++ ))
 done
