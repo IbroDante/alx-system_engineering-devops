@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# prints 1 - 20 on the 4th prints bad luch from china, on the 9th prints bad luck from japan, on the 17th prints bad luck from ital usiing while loop with  case
+count=1
+
+while [ $count -le 20 ]
+do
+  case $count in
+    4)
+      echo "4"
+      echo "bad luck from China"
+      ;;
+    9)
+      echo "9"
+      echo "bad luck from Japan"
+      ;;
+    17)
+      echo "17"
+      echo "bad luck from Italy"
+      ;;
+    *)
+      echo $count
+      ;;
+  esac
+  ((count++))
+done
