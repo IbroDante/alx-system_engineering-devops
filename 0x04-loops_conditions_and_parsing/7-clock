@@ -3,7 +3,7 @@
 hour=0
 minute=1
 
-while [ $hour -lt 12 ]
+while [ $hour -lt 13 ]
 do
   while [ $minute -lt 60 ]
   do
