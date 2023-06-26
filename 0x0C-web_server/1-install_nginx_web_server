@@ -4,5 +4,25 @@
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-service nginx start
+
+sudo bash -c 'cat > /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location = / {
+        echo "Hello World!";
+    }
+}
+EOF'
+
+sudo bash -c 'echo "$(whoami) ALL=(ALL) NOPASSWD: /usr/sbin/service nginx restart" | sudo tee /etc/sudoers.d/nginx-restart'
+
+sudo service nginx restart
