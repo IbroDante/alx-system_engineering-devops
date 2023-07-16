@@ -1,2 +1,3 @@
- * Restarting nginx nginx
-   ...done.
+sed: couldn't open temporary file /etc/nginx/sites-enabled/seduNJLU0: Permission denied
+sed: couldn't open temporary file /etc/nginx/sites-enabled/sedIqUdj2: Permission denied
+sed: couldn't open temporary file /etc/nginx/sites-available/sedDGCmra: Permission denied
